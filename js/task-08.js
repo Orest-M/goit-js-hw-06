@@ -7,12 +7,12 @@ form.addEventListener('submit', (e) => {
 
   const { email, password } = e.currentTarget.elements;
   const data = {
-    email: email.value,
-    password: password.value,
+    email: email.value.trim(),
+    password: password.value.trim(),
   };
 
-  if (email.value === '' || password.value === '') {
-    alert('Всі поля мають бути заповнені');
+  if (email.value === '' || password.value.trim() === '') {
+    return alert('Всі поля мають бути заповнені');
   }
 
   console.log(data);

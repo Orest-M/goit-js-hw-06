@@ -3,9 +3,9 @@ const btn = document.querySelector('.change-color');
 const body = document.querySelector('body');
 
 btn.addEventListener('click', () => {
-  getRandomHexColor();
-  body.style.backgroundColor = getRandomHexColor();
-  span.textContent = getRandomHexColor();
+  const randomColor = getRandomHexColor();
+  body.style.backgroundColor = randomColor;
+  span.textContent = randomColor;
 });
 
 function getRandomHexColor() {
